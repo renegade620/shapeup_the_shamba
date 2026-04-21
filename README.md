@@ -10,9 +10,9 @@ Built for the **Shamba Records SmartSeason Technical Assessment**.
 
 | Role  | Email               | Password    |
 |-------|---------------------|-------------|
-| Admin | admin@shamba.dev    | password123 |
-| Agent | kamau@shamba.dev    | password123 |
-| Agent | fatima@shamba.dev   | password123 |
+| Admin | mkulimamkuu@example.com   | password123 |
+| Agent | mkulimahuria@example.com    | password123 |
+| Agent | mkulimajasiri@example.com  | password123 |
 
 ---
 
