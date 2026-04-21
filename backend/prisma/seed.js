@@ -16,26 +16,26 @@ async function main() {
 
   const admin = await prisma.user.create({
     data: {
-      name: "Frankline Were",
-      email: "franklinegift@gmail.com",
+      name: "Mkulima Mkuu",
+      email: "mkulimamkuu@example.com",
       password: hashedPassword,
       role: "ADMIN",
     },
   });
 
-  const agentKamau = await prisma.user.create({
+  const agentHuria = await prisma.user.create({
     data: {
-      name: "Frankline Gift",
-      email: "omondifrankline6@gmail.com",
+      name: "Mkulima Huria",
+      email: "mkulimahuria@example.com",
       password: hashedPassword,
       role: "AGENT",
     },
   });
 
-  const agentFatima = await prisma.user.create({
+  const agentJasiri = await prisma.user.create({
     data: {
-      name: "Frankline Omondi",
-      email: "fwere@colmusk.ai",
+      name: "Mkulima Jasiri",
+      email: "mkulimajasiri@example.com",
       password: hashedPassword,
       role: "AGENT",
     },
@@ -49,7 +49,7 @@ async function main() {
       cropType: "Maize",
       plantingDate: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000), // 10 days ago
       stage: "GROWING",
-      assignedAgentId: agentKamau.id,
+      assignedAgentId: agentHuria.id,
     },
   });
 
@@ -60,7 +60,7 @@ async function main() {
       cropType: "Beans",
       plantingDate: new Date(Date.now() - 20 * 24 * 60 * 60 * 1000), // 20 days ago
       stage: "PLANTED",
-      assignedAgentId: agentKamau.id,
+      assignedAgentId: agentHuria.id,
     },
   });
 
@@ -71,7 +71,7 @@ async function main() {
       cropType: "Sorghum",
       plantingDate: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000), // 90 days ago
       stage: "HARVESTED",
-      assignedAgentId: agentFatima.id,
+      assignedAgentId: agentJasiri.id,
     },
   });
 
@@ -82,7 +82,7 @@ async function main() {
       cropType: "Tomatoes",
       plantingDate: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000), // 30 days ago
       stage: "GROWING",
-      assignedAgentId: agentFatima.id,
+      assignedAgentId: agentJasiri.id,
     },
   });
 
@@ -93,7 +93,7 @@ async function main() {
       cropType: "Sunflower",
       plantingDate: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000), // 5 days ago
       stage: "PLANTED",
-      assignedAgentId: agentFatima.id,
+      assignedAgentId: agentJasiri.id,
     },
   });
 
@@ -102,7 +102,7 @@ async function main() {
   await prisma.fieldUpdate.create({
     data: {
       fieldId: fieldMaize.id,
-      agentId: agentKamau.id,
+      agentId: agentHuria.id,
       stage: "GROWING",
       notes: "Germination strong. Applying second fertilizer dose this week.",
       createdAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000), // 2 days ago
@@ -113,7 +113,7 @@ async function main() {
   await prisma.fieldUpdate.create({
     data: {
       fieldId: fieldBeans.id,
-      agentId: agentKamau.id,
+      agentId: agentHuria.id,
       stage: "PLANTED",
       notes: "Seeds in the ground. Waiting for rainfall.",
       createdAt: new Date(Date.now() - 9 * 24 * 60 * 60 * 1000), // 9 days ago
@@ -125,21 +125,21 @@ async function main() {
     data: [
       {
         fieldId: fieldSorghum.id,
-        agentId: agentFatima.id,
+        agentId: agentJasiri.id,
         stage: "GROWING",
         notes: "Healthy growth, thinning done.",
         createdAt: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
       },
       {
         fieldId: fieldSorghum.id,
-        agentId: agentFatima.id,
+        agentId: agentJasiri.id,
         stage: "READY",
         notes: "Heads developed, ready for harvest in 5 days.",
         createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
       },
       {
         fieldId: fieldSorghum.id,
-        agentId: agentFatima.id,
+        agentId: agentJasiri.id,
         stage: "HARVESTED",
         notes: "Harvest complete. Yield: ~2.4 tons.",
         createdAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000),
@@ -151,7 +151,7 @@ async function main() {
   await prisma.fieldUpdate.create({
     data: {
       fieldId: fieldSunflower.id,
-      agentId: agentFatima.id,
+      agentId: agentJasiri.id,
       stage: "PLANTED",
       notes: "Planting complete. Irrigation system checked.",
       createdAt: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000), // yesterday
@@ -162,7 +162,7 @@ async function main() {
   await prisma.fieldUpdate.create({
     data: {
       fieldId: fieldTomatoes.id,
-      agentId: agentFatima.id,
+      agentId: agentJasiri.id,
       stage: "GROWING",
       notes: "Some leaf curl observed. Monitoring for pests.",
       createdAt: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000), // 10 days ago
@@ -171,9 +171,9 @@ async function main() {
 
   console.log("✅ Seed complete.\n");
   console.log("Demo credentials (all passwords: password123):");
-  console.log(`  Admin : franklinegift@gmail.com`);
-  console.log(`  Agent : omondifrankline6@gmail.com`);
-  console.log(`  Agent : fwere@colmusk.ai`);
+  console.log(`  Admin : mkulimamkuu@example.com`);
+  console.log(`  Agent : mkulimahuria@example.com`);
+  console.log(`  Agent : mkulimajasiri@example.com`);
 }
 
 main()

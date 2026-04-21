@@ -86,9 +86,9 @@ export default function Login() {
           <p style={{ fontSize: 11, fontWeight: 800, color: "var(--forest-900)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "1px" }}>Demo Credentials</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {[
-              { role: "Admin", email: "franklinegift@gmail.com" },
-              { role: "Agent", email: "omondifrankline6@gmail.com" },
-              { role: "Agent", email: "fwere@colmusk.ai" },
+              { role: "Admin", email: "mkulimamkuu@example.com" },
+              { role: "Agent", email: "mkulimahuria@example.com" },
+              { role: "Agent", email: "mkulimajasiri@example.com" },
             ].map(({ role, email: e }) => (
               <button
                 key={e}
