@@ -34,7 +34,7 @@ export default function Login() {
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" strokeWidth="2.5">
             <path d="M12 22V12M12 12C12 7 7 3 2 3c0 5 4 9 10 9zM12 12c0-5 5-9 10-9-0 5-4 9-10 9z" />
           </svg>
-          <div className="sidebar-logo-text" style={{ color: 'var(--forest-900)', fontSize: 24 }}>yourshamba</div>
+          <div className="sidebar-logo-text" style={{ color: 'var(--forest-900)', fontSize: 24 }}>shambalako</div>
         </div>
 
         <div style={{ marginBottom: 32, textAlign: 'center' }}>
