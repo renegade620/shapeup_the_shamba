@@ -1,4 +1,4 @@
-# SmartSeason Field Monitoring System
+# Shapeup The Shamba System
 
 A web application for tracking crop progress across multiple fields during a growing season.
 
